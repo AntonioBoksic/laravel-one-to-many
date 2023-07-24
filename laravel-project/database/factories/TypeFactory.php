@@ -18,7 +18,7 @@ class TypeFactory extends Factory
     {
         return [
             
-            'name' => fake() -> word()
+            'name' => fake() -> word(),
         ];
     }
 }
