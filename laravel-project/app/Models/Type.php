@@ -12,4 +12,8 @@ class Type extends Model
     //qua potremmo aggiungere 
     // protected $fillable // 
     // in caso volessimo poi in futuro utilizzare il metodo create()
+
+    public function projects() {
+        return $this -> hasMany(Project :: class);
+    }
 }

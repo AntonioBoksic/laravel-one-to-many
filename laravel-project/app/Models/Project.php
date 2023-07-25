@@ -12,4 +12,8 @@ class Project extends Model
     //qua potremmo aggiungere 
     // protected $fillable // 
     // in caso volessimo poi in futuro utilizzare il metodo create()
+
+    public function type() {
+        return $this -> belongsTo(Type :: class);
+    }
 }
