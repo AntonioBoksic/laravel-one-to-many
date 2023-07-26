@@ -42,5 +42,11 @@ require __DIR__.'/auth.php';
 Route::get('/', [MainController::class, 'index'])->name('project.index');
 Route::get('/show/{id}', [MainController::class, 'show'])->name('project.show')
 //aggiungiamo questa linea di codice per riservare la rotta '/show/{id}' a utenti loggati
-    ->middleware(['auth', 'verified']);
+->middleware(['auth', 'verified']);
+
+Route::get('/create',[MainController::class, 'create'])->name('project.create')
+->middleware(['auth', 'verified']);
+
+Route::post('/store',[MainController::class, 'store'])->name('project.store')
+->middleware(['auth', 'verified']);
 

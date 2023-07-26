@@ -13,6 +13,17 @@ class Project extends Model
     // protected $fillable // 
     // in caso volessimo poi in futuro utilizzare il metodo create()
 
+    protected $fillable = [
+
+        'name',
+        'programming_language',
+        'description',
+        'device',
+
+        'type_id'
+
+    ];
+
     public function type() {
         return $this -> belongsTo(Type :: class);
     }

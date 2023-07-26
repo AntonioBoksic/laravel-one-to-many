@@ -22,6 +22,10 @@
             <div class="my-3">
             <strong>compatible devices:</strong> {{$project -> device}}
             </div>
+
+            <div class="my-3">
+            <strong>type:</strong> {{$project -> type -> name}}
+            </div>
            
 
         </div>
